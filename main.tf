@@ -9,11 +9,10 @@ terraform {
   required_version = ">= 0.15"
 }
 provider "aws" {
-  region  = "us-east-1"
-  //profile = "source"
+  region  = var.region
 
   assume_role {
-    role_arn = "arn:aws:iam::716283266746:role/hc-dynamodb-ro"
+    role_arn = "arn:aws:iam::${var.account_id}:role/${var.role}"
   }
 }
 
