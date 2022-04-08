@@ -15,6 +15,6 @@ variable "role" {
 
 variable "region" {
   type        = string
-  type        = "us-east-1"
+  default     = "us-east-1"
   description = "The region to deploy in target AWS account."
 }
